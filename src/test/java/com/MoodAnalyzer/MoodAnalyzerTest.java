@@ -18,7 +18,17 @@ class MoodAnalyzerTest {
 	void givenMessage_whenAnyMood_returnHAPPY() {
 		MoodAnalyzer moodanalyzerobj1 = new MoodAnalyzer("I am Happy Mood");
 		assertEquals("HAPPY", moodanalyzerobj1.analyseMood());
-
 	}
 
+	@Test
+	void givenMessage_whenNullException_returnHAPPY() {
+		
+		MoodAnalyzer moodanalyzerobj1 = new MoodAnalyzer(null);
+	    String result = moodanalyzerobj1.analyseMood();
+	    assertEquals("HAPPY", result);
+		
+			
+		
+		
+	}
 }
